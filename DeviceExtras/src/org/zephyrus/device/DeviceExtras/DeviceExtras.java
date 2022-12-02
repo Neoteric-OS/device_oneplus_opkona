@@ -109,9 +109,12 @@ public class DeviceExtras extends PreferenceFragment
         
         // DC-Dimming
         mDCModeSwitch = (TwoStatePreference) findPreference(KEY_DC_SWITCH);
-        mDCModeSwitch.setEnabled(DCModeSwitch.isSupported());
-        mDCModeSwitch.setChecked(DCModeSwitch.isCurrentlyEnabled(this.getContext()));
-        mDCModeSwitch.setOnPreferenceChangeListener(new DCModeSwitch());
+        if (DCModeSwitch.isSupported()) {
+            mDCModeSwitch.setChecked(DCModeSwitch.isCurrentlyEnabled(this.getContext()));
+            mDCModeSwitch.setOnPreferenceChangeListener(new DCModeSwitch());
+        } else { 
+             findPreference(KEY_DC_SWITCH).setVisible(false);
+        }    
 
         // HBM
         mHBMModeSwitch = (TwoStatePreference) findPreference(KEY_HBM_SWITCH);
