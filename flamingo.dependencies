@@ -8,7 +8,7 @@
     "remote"      : "github",
     "repository"  : "HELLBOY017/kernel_oneplus_sm8250",
     "target_path" : "kernel/oneplus/sm8250",
-    "branch"      : "clo"
+    "branch"      : "clo-new"
   },
   {
     "repository"  : "vendor_oneplus_opkona",
