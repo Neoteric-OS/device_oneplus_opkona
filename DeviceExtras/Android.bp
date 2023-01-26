@@ -29,15 +29,8 @@ android_app {
         "src/**/*.kt",
     ],
     static_libs: [
-        "androidx.annotation_annotation",
         "androidx.core_core",
-        "androidx.core_core-ktx",
-        "androidx.fragment_fragment-ktx",
-        "androidx.lifecycle_lifecycle-runtime-ktx",
-        "androidx.lifecycle_lifecycle-service",
         "androidx.preference_preference",
-        "kotlinx_coroutines_android",
-        "vendor_support",
     ],
     required: [
         "privapp_whitelist_DeviceExtras",

@@ -40,7 +40,7 @@ public class GameModeSwitch implements OnPreferenceChangeListener {
     }
 
     public static boolean isCurrentlyEnabled(Context context) {
-        return FileUtils.getFileValueAsBoolean(getFile(), false, "1, smooth_level:0, sensitive_level:0, high_frame_support:1, high_frame_value:0", "0, smooth_level:0, sensitive_level:0, high_frame_support:1, high_frame_value:0");
+        return FileUtils.getFileValueAsBoolean(getFile(), false, "1, smooth_level:0, sensitive_level:0, high_frame_support:0, high_frame_value:0", "0, smooth_level:0, sensitive_level:0, high_frame_support:0, high_frame_value:0");
     }
 
     @Override

@@ -323,11 +323,6 @@ PRODUCT_PACKAGES += \
     libcodec2_soft_vp8dec \
     libcodec2_soft_vp9enc \
     libcodec2_soft_vp8enc
-    
-# Prefer codec2.0 codecs
-PRODUCT_PROPERTY_OVERRIDES += \
-    debug.stagefright.ccodec=4 \
-    debug.stagefright.omx_default_rank=0
 
 # Net
 PRODUCT_PACKAGES += \
@@ -373,7 +368,7 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-flamingo \
+    $(LOCAL_PATH)/overlay-zephyrus \
     $(LOCAL_PATH)/overlay
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
@@ -509,7 +504,8 @@ PRODUCT_COPY_FILES += \
     
 # Touch
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.oplus
+    vendor.lineage.touch@1.0-service.oplus \
+    TouchGestures
 
 # Update engine
 PRODUCT_PACKAGES += \

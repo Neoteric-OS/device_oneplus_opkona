@@ -19,24 +19,38 @@
     <!-- Device Extras -->
     <string name="device_title">Device Extras</string>
     <string name="device_summary">Adjust device specific settings</string>
-    
-    <!-- AlertSlider -->
-    <string name="alert_slider">Alert Slider</string>
-    <string name="alert_slider_summary">Configure audio modes for different positions</string>
-    <string name="alert_slider_bottom_title">Bottom position</string>
-    <string name="alert_slider_middle_title">Middle position</string>
-    <string name="alert_slider_top_title">Top position</string>
-    <string name="mode_normal">Ring</string>
-    <string name="mode_priority">Priority</string>
-    <string name="mode_vibrate">Vibrate</string>
-    <string name="mode_silent">Silent</string>
-    <string name="mode_dnd">Total Silence</string>
-    <string name="alert_slider_mute_media_title">Mute media</string>
-    <string name="alert_slider_mute_media_summary">Mute media when switching to silent</string>
-    <string name="alert_slider_dialog_title">Show dialog</string>
-    <string name="alert_slider_dialog_summary">Show dialog when changing Alert Slider modes</string>
-    <string name="alert_slider_pulse_title">Pulse on change</string>
-    <string name="alert_slider_pulse_summary">Pulse ambient display when changing Alert Slider modes</string>
+	
+    <!-- Alert slider -->
+    <string name="notification_slider_category_title">Alert slider</string>
+    <string name="notification_slider_title">Alert slider settings</string>
+    <string name="notification_slider_selection_dialog_title">Action</string>
+    <string name="notification_slider_top_position">Top position</string>
+    <string name="notification_slider_middle_position">Middle position</string>
+    <string name="notification_slider_bottom_position">Bottom position</string>
+    <string name="notification_slider_mode_total_silence">Total silence</string>
+    <string name="notification_slider_mode_alarms_only">Alarms only</string>
+    <string name="notification_slider_mode_priority_only">Priority only</string>
+    <string name="notification_slider_mode_none">All</string>
+    <string name="notification_slider_usage_title">Use slider for</string>
+    <string name="notification_slider_for_notification">Notification</string>
+    <string name="notification_slider_for_flashlight">Flashlight</string>
+    <string name="notification_slider_for_brightness">Brightness</string>
+    <string name="notification_slider_for_rotation">Rotation</string>
+    <string name="notification_slider_for_ringer">Ringer</string>
+    <string name="notification_slider_for_notification_ringer">Notification and ringer</string>
+    <string name="notification_slider_flashlight_off">Off</string>
+    <string name="notification_slider_flashlight_on">On</string>
+    <string name="notification_slider_flashlight_blink">Blink</string>
+    <string name="notification_slider_brightness_auto">Auto</string>
+    <string name="notification_slider_brightness_brightest">Brightest</string>
+    <string name="notification_slider_brightness_darkest">Darkest</string>
+    <string name="notification_slider_rotation_auto">Auto</string>
+    <string name="notification_slider_rotation_portrait">Portrait</string>
+    <string name="notification_slider_rotation_landscape_90">Landscape (90°)</string>
+    <string name="notification_slider_rotation_landscape_270">Landscape (270°)</string>
+    <string name="notification_slider_ringer_normal">Normal</string>
+    <string name="notification_slider_ringer_vibrate">Vibrate</string>
+    <string name="notification_slider_ringer_silent">Silent</string>
 
     <!-- Display -->
     <string name="display_title">Display</string>
@@ -114,40 +128,6 @@
     <!-- Touchscreen Gestures -->
     <string name="touchscreen_gesture_settings_title">TouchScreen Gestures</string>
     <string name="touchscreen_gesture_settings_summary">Perform various touchscreen gestures for quick actions</string>
-    <string name="touchscreen_gesture_haptic_feedback_title">Haptic feedback</string>
-    <string name="touchscreen_gesture_haptic_feedback_summary">Vibrate when a touchscreen gesture is detected</string>
-
-    <!-- Screen off Gestures : Input -->
-    <string name="touchscreen_gesture_single_tap_title">Single tap</string>
-    <string name="touchscreen_gesture_two_fingers_down_swipe_title">Swipe down with two fingers</string>
-    <string name="touchscreen_gesture_down_arrow_title">Draw a \"V\"</string>
-    <string name="touchscreen_gesture_right_arrow_title">Draw a \"&gt;\"</string>
-    <string name="touchscreen_gesture_left_arrow_title">Draw a \"&lt;\"</string>
-    <string name="touchscreen_gesture_letter_o_title">Draw the letter \"O\"</string>
-    <string name="touchscreen_gesture_letter_m_title">Draw the letter \"M\"</string>
-    <string name="touchscreen_gesture_letter_s_title">Draw the letter \"S\"</string>
-    <string name="touchscreen_gesture_letter_w_title">Draw the letter \"W\"</string>
-    <string name="touchscreen_gesture_swipe_up_title">One finger up swipe</string>
-    <string name="touchscreen_gesture_swipe_down_title">One finger down swipe</string>
-    <string name="touchscreen_gesture_swipe_left_title">One finger left swipe</string>
-    <string name="touchscreen_gesture_swipe_right_title">One finger right swipe</string>
-
-    <!-- Screen off Gestures : Actions -->
-    <string name="touchscreen_gesture_action_dialog_title">Gesture action</string>
-    <string name="touchscreen_gesture_action_do_nothing">Do nothing</string>
-    <string name="touchscreen_gesture_action_flashlight">Toggle flashlight</string>
-    <string name="touchscreen_gesture_action_camera">Open the camera</string>
-    <string name="touchscreen_gesture_action_browser">Open the browser</string>
-    <string name="touchscreen_gesture_action_dialer">Open the dialer</string>
-    <string name="touchscreen_gesture_action_email">View your emails</string>
-    <string name="touchscreen_gesture_action_messages">View your messages</string>
-    <string name="touchscreen_gesture_action_play_pause_music">Play/pause music</string>
-    <string name="touchscreen_gesture_action_previous_track">Play the previous music track</string>
-    <string name="touchscreen_gesture_action_next_track">Play the next music track</string>
-    <string name="touchscreen_gesture_action_volume_down">Lower media volume</string>
-    <string name="touchscreen_gesture_action_volume_up">Raise media volume</string>
-    <string name="touchscreen_gesture_action_wakeup">Wake up the device</string>
-    <string name="touchscreen_gesture_action_ambient_display">Show ambient display</string>
     
     <!-- USB -->
     <string name="usb_title">USB</string>

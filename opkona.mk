@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2022 FlamingoOS Project
+# Copyright (C) 2023 Project Zephyrus
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -22,9 +22,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/oneplus/opkona/device.mk)
 
 # Inherit from the Flamingo configuration.
-$(call inherit-product, vendor/flamingo/target/product/flamingo.mk)
+$(call inherit-product, vendor/zephyrus/target/product/zephyrus-target.mk)
 
-PRODUCT_NAME := flamingo_opkona
+PRODUCT_NAME := opkona
 PRODUCT_DEVICE := opkona
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus

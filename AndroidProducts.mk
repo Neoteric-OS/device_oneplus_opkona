@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/flamingo_opkona.mk
+    $(LOCAL_DIR)/opkona.mk

@@ -23,16 +23,12 @@
     android:versionCode="4"
     android:versionName="4.0">
 
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.DEVICE_POWER" />
-    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS" />
     <uses-permission android:name="android.permission.INJECT_EVENTS" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
 
-    <protected-broadcast android:name="android.intent.action.SCREEN_CAMERA_GESTURE" />
     <protected-broadcast android:name="com.android.systemui.doze.pulse" />
     <protected-broadcast android:name="org.zephyrus.device.DeviceExtras.UPDATE_SLIDER_POSITION" />
     <protected-broadcast android:name="org.zephyrus.device.DeviceExtras.UPDATE_SLIDER_SETTINGS" />
@@ -159,52 +155,6 @@
                 <action android:name="android.service.quicksettings.action.QS_TILE" />
             </intent-filter>
         </service>
-        
-        <!-- AlertSlider Stuff -->
-        <receiver
-            android:name="org.zephyrus.device.DeviceExtras.alertslider.BootCompletedReceiver"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </receiver>
-        
-        <activity
-            android:name="org.zephyrus.device.DeviceExtras.alertslider.SliderSettingsActivity"
-            android:label="@string/alert_slider"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="org.zephyrus.device.DeviceExtras.alertslider.SETTINGS" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        
-        <service
-            android:name="org.zephyrus.device.DeviceExtras.alertslider.KeyHandler"
-            android:exported="false" />
-            
-        <!-- TouchGestures Settings -->
-        <activity
-            android:name="org.zephyrus.device.DeviceExtras.touch.TouchSettingsActivity"
-            android:label="@string/touchscreen_gesture_settings_title"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="org.zephyrus.device.DeviceExtras.touch.GESTURE_SETTINGS" />
-            </intent-filter>
-        </activity>
-
-        <receiver
-            android:name="org.zephyrus.device.DeviceExtras.touch.BootCompletedReceiver"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
-            </intent-filter>
-        </receiver>
-
-        <service
-            android:name="org.zephyrus.device.DeviceExtras.touch.TouchScreenGestureHandler"
-            android:exported="false" />
 
         <!-- FPS info service -->
         <service

@@ -98,3 +98,9 @@
 # 9R
 /(odm|vendor/odm)/9r/etc(/.*)?                           u:object_r:vendor_configs_file:s0
 /(odm|vendor/odm)/9r/lib(64)?/camera                     u:object_r:vendor_hal_file:s0
+
+# Files in rootfs
+/bt_firmware(/.*)?                              u:object_r:bt_firmware_file:s0
+/firmware(/.*)?                                 u:object_r:firmware_file:s0
+/persist(/.*)?                                  u:object_r:mnt_vendor_file:s0
+/dsp(/.*)?					u:object_r:adsprpcd_file:s0
