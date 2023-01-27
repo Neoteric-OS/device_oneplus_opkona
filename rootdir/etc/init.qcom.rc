@@ -443,6 +443,10 @@ on post-fs-data
     chown system system /sys/module/tpd/parameters/tpd_dynamic
     chown system system /sys/module/tpd/parameters/st_tpd_enable
 
+    # Media XML codecs
+    setprop ro.media.xml_variant.codecs _kona
+    setprop ro.media.xml_variant.codecs_performance _kona    
+
 service nqnfcinfo /system/vendor/bin/nqnfcinfo
     class late_start
     group nfc
