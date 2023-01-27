@@ -373,7 +373,6 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
 PRODUCT_PACKAGES += \
-    AlertSliderOverlay \
     OnePlus9RWifiOverlay \
     OplusBrightnessOverlay \
     OplusCarrierConfigOverlay \
@@ -384,7 +383,6 @@ PRODUCT_PACKAGES += \
     
 # Overlays - OP8
 PRODUCT_PACKAGES += \
-    OP8AlertSliderOverlay \
     OnePlus8FrameworkRes \
     OnePlus8WifiOverlay \
     OnePlus8SettingsProviderOverlay \
@@ -392,7 +390,6 @@ PRODUCT_PACKAGES += \
     
 # Overlays - OP8P
 PRODUCT_PACKAGES += \
-    OP8PAlertSliderOverlay \
     OnePlus8ProFrameworkRes \
     OnePlus8ProWifiOverlay \
     OnePlus8ProSettingsProviderOverlay \
