@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from LE2101_11.F.16
+# All unpinned blobs below are extracted from LE2101_11.F.21
 
 # ACDB
 vendor/etc/acdbdata/adsp_avs_config.acdb
