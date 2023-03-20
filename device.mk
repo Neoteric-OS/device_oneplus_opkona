@@ -413,10 +413,6 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # Platform
 TARGET_BOARD_PLATFORM := kona
 
-# Remove unwanted packages
-PRODUCT_PACKAGES += \
-    RemovePackages
-
 # QMI
 PRODUCT_PACKAGES += \
     libqti_vndfwk_detect \
