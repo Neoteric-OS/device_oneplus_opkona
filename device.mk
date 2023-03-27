@@ -255,7 +255,9 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor
 
 # Media
-GENERIC_ODM_IMAGE := true
+PRODUCT_ODM_PROPERTIES += \
+    debug.stagefright.ccodec=4 \
+    debug.stagefright.omx_default_rank=0
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
