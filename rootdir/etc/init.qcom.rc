@@ -78,7 +78,11 @@ on init
     
     # Vibration intensity
     chown system system /sys/class/leds/vibrator/level
-
+    
+    # Enable touchpanel's offscreen gestures
+    chown system system /proc/touchpanel/aosp_gesture_enable
+    write /proc/touchpanel/aosp_gesture_enable 1
+    
     # Charger
     write /proc/fastchg_fw_update 1
     write /proc/ui_soc_decimal 1
