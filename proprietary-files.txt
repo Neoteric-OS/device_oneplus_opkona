@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from LE2101_11.F.21
+# All unpinned blobs below are extracted from LE2101_13.1.0.500(EX01)
 
 # ACDB
 vendor/etc/acdbdata/adsp_avs_config.acdb
@@ -148,8 +148,8 @@ odm/lib64/camera/fdconfigvideolite.bin
 odm/lib64/libSonyIMX471RmscLibrary.so
 odm/lib64/libfastov_dsp.so
 odm/lib64/libormshalclient.so
-odm/lib64/vendor.oplus.hardware.cammidasservice@1.0.so
 odm/lib64/vendor.oplus.hardware.orms@1.0.so
+odm/lib64/vendor.oplus.hardware.cammidasservice-V1-ndk_platform.so
 vendor/etc/camera/M_Attribute_AG_BMW_1.1.0.model.hardcode
 vendor/lib/libc++_shared.so
 vendor/lib/libnightvision.so
@@ -242,6 +242,7 @@ vendor/lib64/libcvp_common.so
 vendor/lib64/libdualcam_video_optical_zoom.so
 vendor/lib64/libipebpsstriping.so
 vendor/lib64/libmidasserviceintf.so
+vendor/lib64/libmidasserviceintf_aidl.so
 vendor/lib64/libmmcamera_faceproc.so
 vendor/lib64/libmmcamera_faceproc2.so
 vendor/lib64/libmpbase.so
@@ -254,7 +255,7 @@ vendor/lib64/libthreadutils.so
 vendor/lib64/libtriplecam_optical_zoom_control.so
 vendor/lib64/libtriplecam_video_optical_zoom.so
 vendor/lib64/vendor.oplus.hardware.cammidasservice@1.0.so
-vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so|8ddd7248fffd3906842d61c387072017a7a9a954|f1b01b64c9abe422f560f51ee7ca03212477b0af
+vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so|7dc3f932216311875fb598c31cd94837c50cf32e|07034348534c394184ff3ae5809be0e7f222e165
 
 # Camera (lemonades)
 odm/etc/camera/ashdr/ncf_pack.ncf:odm/9r/etc/camera/ashdr/ncf_pack.ncf
@@ -500,9 +501,11 @@ odm/lib64/libgf_hal_19811_G6_oplus.so
 odm/lib64/libgf_hal_20828_G6_7_oplus.so
 odm/lib64/libgf_hal_G5_oplus.so
 odm/lib64/libgf_hal_G6_oplus.so
-odm/lib64/vendor.oplus.hardware.commondcs@1.0.so
-odm/lib64/vendor.oplus.hardware.osense.client@1.0.so
-odm/lib64/libosensehalclient.so
+odm/lib64/libolc_vnd.so
+odm/lib64/vendor.oplus.hardware.commondcs-V1-ndk_platform.so
+odm/lib64/vendor.oplus.hardware.olc2-V1-ndk_platform.so
+odm/lib/vendor.oplus.hardware.performance-V1-ndk_platform.so
+odm/lib64/vendor.oplus.hardware.performance-V1-ndk_platform.so
 
 # Fingerprint firmware (lemonades)
 odm/vendor/firmware/gfp9638.b00
@@ -644,9 +647,9 @@ vendor/lib64/vendor.qti.hardware.cacert@1.0.so
 
 # Hotword Enrollment
 my_product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml:product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml
-my_product/etc/permissions/com.android.hotwordenrollment.okgoogle.xml:product/etc/permissions/com.android.hotwordenrollment.okgoogle.xml
 my_product/framework/com.android.hotwordenrollment.common.util.jar:product/framework/com.android.hotwordenrollment.common.util.jar
-my_product/priv-app/HotwordEnrollmentOKGoogleHEXAGON.apk:product/priv-app/HotwordEnrollmentOKGoogleHEXAGON.apk
+my_product/priv-app/HotwordEnrollmentOKGoogle.apk:product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogle.apk
+my_product/priv-app/HotwordEnrollmentXGoogle.apk:product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogle.apk
 
 # IPA firmware
 vendor/etc/init/ipa_fws.rc
@@ -818,6 +821,12 @@ vendor/lib64/libOmxMpeghEncSw.so
 vendor/lib64/libOmxQcelp13Dec.so
 vendor/lib64/libOmxVpp.so
 vendor/lib64/libOmxWmaDec.so
+
+# Osense
+odm/lib64/vendor.oplus.hardware.osense.client@1.0.so
+odm/lib64/libosensehalclient.so
+odm/lib64/libosenseaidlhalclient.so
+odm/lib64/vendor.oplus.hardware.osense.client-V1-ndk_platform.so
 
 # Peripheral
 vendor/bin/pm-proxy
