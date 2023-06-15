@@ -17,6 +17,7 @@ persist.debug.coresight.config=stm-events
 dalvik.vm.dex2oat64.enabled=true
 
 # Display
+debug.sf.enable_hwc_vds=1
 persist.sys.force_sw_gles=1
 
 # FMRadio
@@ -87,3 +88,7 @@ ro.vendor.qti.va_aosp.support=1
 
 # WiFi
 config.disable_rtt=true
+
+# WFD
+persist.debug.wfd.enable=1
+persist.sys.wfd.virtual=0
