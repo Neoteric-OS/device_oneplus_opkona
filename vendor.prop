@@ -105,7 +105,6 @@ ro.bluetooth.a2dp_offload.supported=true
 vendor.qcom.bluetooth.soc=hastings
 
 # Chipset
-ro.soc.manufacturer=Qualcomm
 ro.soc.model=SM8250
 
 # Crypto
