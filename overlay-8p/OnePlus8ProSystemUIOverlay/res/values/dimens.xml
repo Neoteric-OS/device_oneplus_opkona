@@ -26,8 +26,6 @@
     <dimen name="tri_state_down_dialog_position">745px</dimen>
     <dimen name="tri_state_middle_dialog_position">614px</dimen>
     <dimen name="tri_state_up_dialog_position">488px</dimen>
-
-    <dimen name="qs_header_row_min_height">172px</dimen>
     
     <!-- The Enrollment Progress bar for UDFPS sensor in pixels -->
     <integer name="config_udfpsEnrollProgressBar" translatable="false">120</integer>
