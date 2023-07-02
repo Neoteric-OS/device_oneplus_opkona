@@ -8,5 +8,5 @@
       android:targetPackage="com.android.wifi.resources"
       android:targetName="WifiCustomization"
       android:isStatic="true"
-      android:priority="400"/>
+      android:priority="6969"/>
 </manifest>
