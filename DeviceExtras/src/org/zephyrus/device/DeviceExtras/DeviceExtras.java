@@ -62,8 +62,6 @@ public class DeviceExtras extends PreferenceFragment
     public static final String KEY_SETTINGS_PREFIX = "device_setting_";
 
     public static final String KEY_ADRENOBOOST = "adrenoboost";
-    public static final String KEY_AUTO_HBM_SWITCH = "auto_hbm";
-    public static final String KEY_AUTO_HBM_THRESHOLD = "auto_hbm_threshold";
     public static final String KEY_DOZE = "advanced_doze_settings";
     public static final String KEY_DC_SWITCH = "dc";
     public static final String KEY_FPS_INFO = "fps_info";
@@ -79,7 +77,6 @@ public class DeviceExtras extends PreferenceFragment
     private static ListPreference mFpsInfoPosition;
     private static ListPreference mFpsInfoColor;
     private static SwitchPreference mFpsInfo;
-    private static TwoStatePreference mAutoHBMSwitch;
     private static TwoStatePreference mDCModeSwitch;
     private static TwoStatePreference mGameModeSwitch;
     private static TwoStatePreference mHBMModeSwitch;
@@ -121,11 +118,6 @@ public class DeviceExtras extends PreferenceFragment
         mHBMModeSwitch.setEnabled(HBMModeSwitch.isSupported());
         mHBMModeSwitch.setChecked(PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean(DeviceExtras.KEY_HBM_SWITCH, false));
         mHBMModeSwitch.setOnPreferenceChangeListener(this);
-
-        // AutoHBM
-        mAutoHBMSwitch = (TwoStatePreference) findPreference(KEY_AUTO_HBM_SWITCH);
-        mAutoHBMSwitch.setChecked(PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean(DeviceExtras.KEY_AUTO_HBM_SWITCH, false));
-        mAutoHBMSwitch.setOnPreferenceChangeListener(this);
 
         // FPS
         mFpsInfo = (SwitchPreference) findPreference(KEY_FPS_INFO);
@@ -177,10 +169,6 @@ public class DeviceExtras extends PreferenceFragment
         return PreferenceManager.getDefaultSharedPreferences(context).getBoolean(DeviceExtras.KEY_HBM_SWITCH, false);
     }
 
-    public static boolean isAUTOHBMEnabled(Context context) {
-        return PreferenceManager.getDefaultSharedPreferences(context).getBoolean(DeviceExtras.KEY_AUTO_HBM_SWITCH, false);
-    }
-
     private void initNotificationSliderPreference() {
         registerPreferenceListener(Constants.NOTIF_SLIDER_USAGE_KEY);
         registerPreferenceListener(Constants.NOTIF_SLIDER_ACTION_TOP_KEY);
@@ -207,13 +195,7 @@ public class DeviceExtras extends PreferenceFragment
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mAutoHBMSwitch) {
-            Boolean enabled = (Boolean) newValue;
-            SharedPreferences.Editor prefChange = PreferenceManager.getDefaultSharedPreferences(getContext()).edit();
-            prefChange.putBoolean(KEY_AUTO_HBM_SWITCH, enabled).commit();
-            FileUtils.enableService(getContext());
-            return true;
-        } else if (preference == mHBMModeSwitch) {
+         if (preference == mHBMModeSwitch) {
             Boolean enabled = (Boolean) newValue;
             FileUtils.writeValue(HBMModeSwitch.getFile(), enabled ? "1" : "0");
             Intent hbmIntent = new Intent(this.getContext(),

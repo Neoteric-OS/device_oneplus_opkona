@@ -57,10 +57,6 @@
     <string name="hbm_mode_title">Режим высокой яркости</string>
     <string name="hbm_mode_summary">Включить максимальную подсветку</string>
     <string name="hbm_mode_warning">Длительное использования режима высокой яркости может повредить ваш дисплей</string>
-    <string name="auto_hbm_title">Автоматический режим высокой яркости</string>
-    <string name="auto_hbm_summary">Включить максимальную подсветку, основанную на солнечном свете</string>
-    <string name="auto_hbm_threshold_title"></string>
-    <string name="auto_hbm_threshold_summary">Порог (lux)</string>
 
      <!-- FPS Info -->
     <string name="fps_title">Измерение FPS</string>
