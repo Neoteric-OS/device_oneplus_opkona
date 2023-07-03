@@ -39,26 +39,6 @@ public class FileUtils {
     private static final String TAG = "FileUtils";
 
     private static boolean mServiceEnabled = false;
-
-    private static void startService(Context context) {
-        context.startServiceAsUser(new Intent(context, AutoHBMService.class),
-                UserHandle.CURRENT);
-        mServiceEnabled = true;
-    }
-
-    private static void stopService(Context context) {
-        mServiceEnabled = false;
-        context.stopServiceAsUser(new Intent(context, AutoHBMService.class),
-                UserHandle.CURRENT);
-    }
-
-    public static void enableService(Context context) {
-        if (DeviceExtras.isAUTOHBMEnabled(context) && !mServiceEnabled) {
-            startService(context);
-        } else if (!DeviceExtras.isAUTOHBMEnabled(context) && mServiceEnabled) {
-            stopService(context);
-        }
-    }
     
     /**
      * Checks whether the given file exists
