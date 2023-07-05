@@ -68,29 +68,28 @@
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
         <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>8</item>
+        <item>12</item>
         <item>15</item>
-        <item>30</item>
-        <item>50</item>
-        <item>100</item>
-        <item>200</item>
-        <item>300</item>
-        <item>400</item>
-        <item>500</item>
-        <item>650</item>
-        <item>800</item>
-        <item>1000</item>
-        <item>1500</item>
-        <item>2000</item>
+        <item>20</item>
+        <item>33</item>
+        <item>55</item>
+        <item>90</item>
+        <item>148</item>
+        <item>245</item>
+        <item>403</item>
+        <item>665</item>
+        <item>1097</item>
+        <item>1808</item>
         <item>3000</item>
-        <item>4000</item>
-        <item>5000</item>
-        <item>7000</item>
+        <item>6000</item>
+        <item>9000</item>
         <item>10000</item>
-        <item>12500</item>
-        <item>15000</item>
-        <item>17500</item>
+        <item>14000</item>
         <item>20000</item>
-        <item>50000</item>
     </integer-array>
 
     <!-- Array of desired screen brightness in nits corresponding to the lux values
@@ -107,31 +106,30 @@
          array. The brightness values must be non-negative and non-decreasing. This must be
          overridden in platform specific overlays -->
     <array name="config_autoBrightnessDisplayValuesNits">
-        <item>2</item>
-        <item>8</item>
-        <item>11</item>
-        <item>17</item>
-        <item>35</item>
-        <item>52</item>
-        <item>67</item>
-        <item>81</item>
-        <item>103</item>
-        <item>119</item>
-        <item>130</item>
-        <item>138</item>
-        <item>151</item>
-        <item>164</item>
-        <item>176</item>
-        <item>229</item>
-        <item>264</item>
-        <item>291</item>
-        <item>303</item>
-        <item>310</item>
-        <item>314</item>
-        <item>319</item>
-        <item>399</item>
-        <item>405</item>
-        <item>405</item>
+        <item>5.139055</item>
+        <item>9.962019</item>
+        <item>18.34823</item>
+        <item>21.550682</item>
+        <item>24.016779</item>
+        <item>32.5</item>
+        <item>46</item>
+        <item>53.26923</item>
+        <item>54.615383</item>
+        <item>58.115383</item>
+        <item>62.1394</item>
+        <item>67.13133</item>
+        <item>79.67614</item>
+        <item>98.04727</item>
+        <item>125.1222</item>
+        <item>161.68752</item>
+        <item>208.48856</item>
+        <item>264.82214</item>
+        <item>328.58694</item>
+        <item>627.4315</item>
+        <item>826.85846</item>
+        <item>867.04944</item>
+        <item>901.4497</item>
+        <item>1000.0</item>
     </array>
 
     <!-- An array of floats describing the screen brightness in nits corresponding to the backlight
@@ -142,29 +140,8 @@
 
          This array should be equal in size to config_screenBrightnessBacklight -->
     <array name="config_screenBrightnessNits">
-        <item>2</item>
-        <item>8</item>
-        <item>11</item>
-        <item>35</item>
-        <item>52</item>
-        <item>67</item>
-        <item>81</item>
-        <item>103</item>
-        <item>119</item>
-        <item>130</item>
-        <item>138</item>
-        <item>151</item>
-        <item>164</item>
-        <item>176</item>
-        <item>229</item>
-        <item>264</item>
-        <item>291</item>
-        <item>303</item>
-        <item>310</item>
-        <item>314</item>
-        <item>319</item>
-        <item>399</item>
-        <item>405</item>
+        <item>1</item>
+        <item>500</item>
     </array>
 
     <!-- An array describing the screen's backlight values corresponding to the brightness
@@ -173,27 +150,6 @@
          This array should be equal in size to config_screenBrightnessBacklight. -->
     <integer-array name="config_screenBrightnessBacklight">
         <item>1</item>
-        <item>5</item>
-        <item>7</item>
-        <item>22</item>
-        <item>33</item>
-        <item>42</item>
-        <item>51</item>
-        <item>65</item>
-        <item>75</item>
-        <item>82</item>
-        <item>87</item>
-        <item>95</item>
-        <item>103</item>
-        <item>111</item>
-        <item>144</item>
-        <item>166</item>
-        <item>183</item>
-        <item>191</item>
-        <item>195</item>
-        <item>198</item>
-        <item>201</item>
-        <item>251</item>
         <item>255</item>
     </integer-array>
     
