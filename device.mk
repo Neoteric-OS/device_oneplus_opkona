@@ -34,28 +34,19 @@ PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
-    RUN_POSTINSTALL_system=true \
-    POSTINSTALL_PATH_system=system/bin/otapreopt_script \
-    FILESYSTEM_TYPE_system=ext4 \
-    POSTINSTALL_OPTIONAL_system=true
-
-AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_vendor=true \
     POSTINSTALL_PATH_vendor=bin/checkpoint_gc \
     FILESYSTEM_TYPE_vendor=ext4 \
     POSTINSTALL_OPTIONAL_vendor=true
 
 PRODUCT_PACKAGES += \
-    checkpoint_gc \
-    otapreopt_script
+    checkpoint_gc
     
 # ANT
 PRODUCT_PACKAGES += \
     com.dsi.ant@1.0.vendor
     
 # ART
-# Optimize everything for preopt
-PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
 # Don't preopt prebuilts
 DONT_DEXPREOPT_PREBUILTS := true
 
@@ -64,7 +55,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     pm.dexopt.boot=verify \
     pm.dexopt.first-boot=quicken \
     pm.dexopt.install=speed-profile \
-    pm.dexopt.bg-dexopt=everything \
+    pm.dexopt.bg-dexopt=speed-profile \
     pm.dexopt.ab-ota=quicken
 
 # Dex
