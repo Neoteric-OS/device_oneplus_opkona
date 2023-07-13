@@ -168,6 +168,9 @@ ro.incremental.enable=1
 # Media
 debug.media.codec2=2
 
+# Multi-gen LRU
+persist.device_config.mglru_native.lru_gen_config=all
+
 # NFC
 vendor.qti.nfc.chipid=0x51
 
