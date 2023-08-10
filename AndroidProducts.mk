@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/opkona.mk
+    $(LOCAL_DIR)/p404_opkona.mk

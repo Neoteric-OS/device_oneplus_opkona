@@ -21,13 +21,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from opkona device
 $(call inherit-product, device/oneplus/opkona/device.mk)
 
-# Inherit from the Flamingo configuration.
-$(call inherit-product, vendor/zephyrus/target/product/zephyrus-target.mk)
+# Inherit from the 404 configuration.
+$(call inherit-product, vendor/404/configs/common.mk)
 
-PRODUCT_NAME := opkona
+PRODUCT_NAME := p404_opkona
 PRODUCT_DEVICE := opkona
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
 PRODUCT_MODEL := kona
+
+# Set Boot Animination Resolution
+TARGET_BOOT_ANIMATION_RES := 1080
+
+# Include GAPPS
+WITH_GAPPS := true
 
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
