@@ -1,5 +1,5 @@
 runtime_resource_overlay {
     name: "OnePlus9RWifiOverlay",
     sdk_version: "current",
-    device_specific: true
+    product_specific: true
 }
