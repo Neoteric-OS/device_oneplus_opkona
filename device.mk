@@ -425,13 +425,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 # Use FUSE passthrough
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.sys.fuse.passthrough.enable=true
-
-# QMI
-PRODUCT_PACKAGES += \
-    libqti_vndfwk_detect \
-    libqti_vndfwk_detect.vendor \
-    libvndfwk_detect_jni.qti \
-    libvndfwk_detect_jni.qti.vendor
     
 # QTI Components
 TARGET_COMMON_QTI_COMPONENTS := \
@@ -441,15 +434,6 @@ TARGET_COMMON_QTI_COMPONENTS := \
     perf \
     telephony \
     usb
-
-# RIL
-PRODUCT_PACKAGES += \
-    android.hardware.radio@1.5.vendor \
-    android.hardware.radio.config@1.2.vendor \
-    android.hardware.radio.deprecated@1.0.vendor
-
-PRODUCT_PACKAGES += \
-    libprotobuf-cpp-full
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -504,10 +488,6 @@ PRODUCT_COPY_FILES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
-
-# Telephony
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml
     
 # Touch
 PRODUCT_PACKAGES += \
