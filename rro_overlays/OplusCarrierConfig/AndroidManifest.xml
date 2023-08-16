@@ -14,10 +14,10 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.oplus.carrierconfig.overlay">
+    package="com.android.carrierconfig.overlay.oplus">
 
     <overlay
         android:isStatic="true"
-        android:priority="6969"
+        android:priority="800"
         android:targetPackage="com.android.carrierconfig" />
 </manifest>
