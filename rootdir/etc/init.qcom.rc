@@ -83,6 +83,9 @@ on init
     chown system system /proc/touchpanel/aosp_gesture_enable
     write /proc/touchpanel/aosp_gesture_enable 1
     
+    # Ensure we have proper max brightness for HBM
+    write /sys/kernel/oplus_display/max_brightness 4095
+    
     # Charger
     write /proc/fastchg_fw_update 1
     write /proc/ui_soc_decimal 1
