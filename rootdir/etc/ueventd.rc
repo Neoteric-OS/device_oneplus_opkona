@@ -482,3 +482,6 @@ firmware_directories /mnt/vendor/persist/copy/ /mnt/vendor/persist/ /odm/etc/wif
 /sys/devices/platform/soc/*.i2c/i2c-*/*-*/iio:device*   in_temp_raw                     0664    system  system
 /sys/devices/platform/soc/*.i2c/i2c-*/*-*/iio:device*   in_temp_scale                   0664    system  system
 /sys/devices/platform/soc/*.i2c/i2c-*/*-*/iio:device*   in_temp_scale_available         0664    system  system
+
+# Charger
+/sys/class/oplus_chg/*  mmi_charging_enable    0660    system  system
