@@ -32,7 +32,7 @@ LOCAL_C_INCLUDES += \
     external/tinycompress/include
 
 LOCAL_HEADER_LIBRARIES += \
-    qti_kernel_headers \
+    generated_kernel_headers \
     libhardware_headers
 
 LOCAL_SHARED_LIBRARIES += \
