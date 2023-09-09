@@ -86,7 +86,8 @@ PRODUCT_PACKAGES += \
     audio_amplifier.kona \
     audio.primary.kona \
     audio.r_submix.default \
-    audio.usb.default
+    audio.usb.default \
+    sound_trigger.primary.kona
 
 PRODUCT_PACKAGES += \
     liba2dpoffload \
