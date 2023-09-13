@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2023 Project Zephyrus
+# Copyright (C) 2023 Neoteric OS
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,8 +21,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from opkona device
 $(call inherit-product, device/oneplus/opkona/device.mk)
 
-# Inherit from the Flamingo configuration.
-$(call inherit-product, vendor/zephyrus/target/product/zephyrus-target.mk)
+# Inherit from the Neoteric configuration.
+$(call inherit-product, vendor/neoteric/target/product/neoteric-target.mk)
 
 PRODUCT_NAME := opkona
 PRODUCT_DEVICE := opkona
