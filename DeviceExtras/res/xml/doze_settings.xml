@@ -24,7 +24,7 @@
         android:key="doze_enable"
         android:title="@string/ambient_enable" />
 
-    <SwitchPreference
+    <org.neoteric.support.preference.SwitchPreference
         android:key="always_on_display"
         android:disableDependentsState="true"
         android:icon="@drawable/ic_eye"
@@ -51,7 +51,7 @@
         android:key="proximity_sensor"
         android:title="@string/proximity_sensor_title">
 
-        <SwitchPreference
+        <org.neoteric.support.preference.SwitchPreference
             android:key="gesture_pocket"
             android:defaultValue="false"
             android:icon="@drawable/ic_pocket"

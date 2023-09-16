@@ -18,7 +18,7 @@
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="org.zephyrus.device.DeviceExtras"
+    package="org.neoteric.device.DeviceExtras"
     android:sharedUserId="android.uid.system"
     android:versionCode="4"
     android:versionName="4.0">
@@ -30,8 +30,8 @@
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
 
     <protected-broadcast android:name="com.android.systemui.doze.pulse" />
-    <protected-broadcast android:name="org.zephyrus.device.DeviceExtras.UPDATE_SLIDER_POSITION" />
-    <protected-broadcast android:name="org.zephyrus.device.DeviceExtras.UPDATE_SLIDER_SETTINGS" />
+    <protected-broadcast android:name="org.neoteric.device.DeviceExtras.UPDATE_SLIDER_POSITION" />
+    <protected-broadcast android:name="org.neoteric.device.DeviceExtras.UPDATE_SLIDER_SETTINGS" />
 
     <uses-sdk
         android:minSdkVersion="28"
@@ -51,7 +51,7 @@
             tools:replace="android:authorities"/>
 
         <receiver
-            android:name="org.zephyrus.device.DeviceExtras.Startup"
+            android:name="org.neoteric.device.DeviceExtras.Startup"
             android:defaultToDeviceProtectedStorage="true"
             android:directBootAware="true"
             android:enabled="true"
@@ -63,13 +63,13 @@
         </receiver>
 
         <activity 
-            android:name="org.zephyrus.device.DeviceExtras" />
+            android:name="org.neoteric.device.DeviceExtras" />
         <activity 
-            android:name="org.zephyrus.device.DeviceExtras.KeyHandler" />
+            android:name="org.neoteric.device.DeviceExtras.KeyHandler" />
 
         <!-- DeviceExtras -->
         <activity
-            android:name="org.zephyrus.device.DeviceExtras.DeviceExtrasActivity"
+            android:name="org.neoteric.device.DeviceExtras.DeviceExtrasActivity"
             android:label="@string/device_title">
             <intent-filter>
                 <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
@@ -88,7 +88,7 @@
 
         <!-- DeviceExtras tile -->
         <service
-            android:name="org.zephyrus.device.DeviceExtras.DeviceExtrasTileService"
+            android:name="org.neoteric.device.DeviceExtras.DeviceExtrasTileService"
             android:icon="@drawable/ic_settings_device"
             android:label="@string/device_title"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -99,7 +99,7 @@
         
         <!-- DC-Dimming tile -->
         <service
-            android:name="org.zephyrus.device.DeviceExtras.DCModeTileService"
+            android:name="org.neoteric.device.DeviceExtras.DCModeTileService"
             android:icon="@drawable/ic_dc_mode"
             android:label="@string/dc_mode_title"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -110,12 +110,12 @@
 
         <!-- HBM Service -->
         <service 
-            android:name="org.zephyrus.device.DeviceExtras.HBMModeService"
+            android:name="org.neoteric.device.DeviceExtras.HBMModeService"
             android:exported="false" />
 
         <!-- HBM tile -->
         <service
-            android:name="org.zephyrus.device.DeviceExtras.HBMModeTileService"
+            android:name="org.neoteric.device.DeviceExtras.HBMModeTileService"
             android:icon="@drawable/ic_hbm_mode"
             android:label="@string/hbm_mode_title"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -126,12 +126,12 @@
 
         <!-- Doze service -->
         <service
-            android:name="org.zephyrus.device.DeviceExtras.doze.DozeService"
+            android:name="org.neoteric.device.DeviceExtras.doze.DozeService"
             android:permission="OneplusDozeService" />
 
         <!-- Doze Activity -->
         <activity
-            android:name="org.zephyrus.device.DeviceExtras.doze.DozeSettingsActivity"
+            android:name="org.neoteric.device.DeviceExtras.doze.DozeSettingsActivity"
             android:exported="true"
             android:label="@string/ambient_display_title">
             <intent-filter>
@@ -142,7 +142,7 @@
 
         <!-- Doze tile -->
         <service
-            android:name="org.zephyrus.device.DeviceExtras.doze.DozeTileService"
+            android:name="org.neoteric.device.DeviceExtras.doze.DozeTileService"
             android:icon="@drawable/ic_eye"
             android:label="@string/ambient_display_gestures_title"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -153,12 +153,12 @@
 
         <!-- FPS info service -->
         <service
-            android:name="org.zephyrus.device.DeviceExtras.FPSInfoService"
+            android:name="org.neoteric.device.DeviceExtras.FPSInfoService"
             android:exported="false" />
 
         <!-- FPS tile -->
         <service
-            android:name="org.zephyrus.device.DeviceExtras.FPSTileService"
+            android:name="org.neoteric.device.DeviceExtras.FPSTileService"
             android:icon="@drawable/ic_fps_overlay"
             android:label="@string/fps_info_title"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -169,7 +169,7 @@
 
         <!-- Game Mode  Tile -->
         <service
-            android:name="org.zephyrus.device.DeviceExtras.GameModeTileService"
+            android:name="org.neoteric.device.DeviceExtras.GameModeTileService"
             android:icon="@drawable/ic_game_mode"
             android:label="@string/game_mode_title"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -181,7 +181,7 @@
         
         <!-- OTG tile -->
         <service
-            android:name="org.zephyrus.device.DeviceExtras.OTGModeTileService"
+            android:name="org.neoteric.device.DeviceExtras.OTGModeTileService"
             android:icon="@drawable/ic_otg_mode"
             android:label="@string/otg_mode_title"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -192,8 +192,8 @@
 
         <!-- Search Indexing -->
         <provider
-            android:name="org.zephyrus.device.DeviceExtras.ConfigPanelSearchIndexablesProvider"
-            android:authorities="org.zephyrus.device"
+            android:name="org.neoteric.device.DeviceExtras.ConfigPanelSearchIndexablesProvider"
+            android:authorities="org.neoteric.device"
             android:exported="true"
             android:grantUriPermissions="true"
             android:multiprocess="false"

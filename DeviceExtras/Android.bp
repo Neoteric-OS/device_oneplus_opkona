@@ -31,6 +31,7 @@ android_app {
     static_libs: [
         "androidx.core_core",
         "androidx.preference_preference",
+        "VendorSupport-Libs",
     ],
     required: [
         "privapp_whitelist_DeviceExtras",
