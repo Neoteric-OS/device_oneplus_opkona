@@ -378,6 +378,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
     
 # QTI Components
 TARGET_COMMON_QTI_COMPONENTS := \
+    alarm \
     bt \
     media \
     overlay \
