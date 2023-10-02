@@ -89,6 +89,7 @@ on init
     # Charger
     write /proc/fastchg_fw_update 1
     write /proc/ui_soc_decimal 1
+    chown system system /proc/wireless/quiet_mode
 
 on post-fs
     chmod 0755 /sys/kernel/debug/tracing

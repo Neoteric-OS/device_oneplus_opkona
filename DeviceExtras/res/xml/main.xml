@@ -162,6 +162,23 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:key="power"
+        android:title="@string/power_title">
+        
+    <org.neoteric.support.preference.SwitchPreference
+            android:key="powershare"
+            android:icon="@drawable/ic_powershare"
+            android:title="@string/powershare_mode_title"
+            android:summary="@string/powershare_mode_summary" />
+
+    <org.neoteric.support.preference.SwitchPreference
+            android:key="quiet_mode"
+            android:icon="@drawable/ic_quiet_mode"
+            android:title="@string/quiet_mode_title"
+            android:summary="@string/quiet_mode_summary" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="touchscreen"
         android:title="@string/touchscreen_title">
 

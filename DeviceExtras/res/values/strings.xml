@@ -129,4 +129,11 @@
     <string name="usb_title">USB</string>
     <string name="otg_mode_title">USB-OTG</string>
     <string name="otg_mode_summary">Enable USB on-the-go mode</string>
+
+    <!-- Power -->
+    <string name="power_title">Power</string>
+    <string name="powershare_mode_title">Wireless powershare</string>
+    <string name="powershare_mode_summary">Enable reverse wireless charging</string>
+    <string name="quiet_mode_title">Quiet mode</string>
+    <string name="quiet_mode_summary">Enable Quiet mode for OEM wireless charger</string>
 </resources>

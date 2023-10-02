@@ -17,3 +17,5 @@ allow system_app vendor_sysfs_usb_supply:file rw_file_perms;
 allow system_app vendor_proc_tri_state_key:dir r_dir_perms;
 allow system_app vendor_proc_tri_state_key:file rw_file_perms;
 allow system_app system_app_data_file:dir create_dir_perms;
+allow system_app vendor_proc_wireless:dir r_dir_perms;
+allow system_app vendor_proc_wireless:{ file lnk_file } rw_file_perms;

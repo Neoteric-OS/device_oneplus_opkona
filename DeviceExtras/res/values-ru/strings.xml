@@ -118,4 +118,11 @@
 
     <string name="touchscreen_gesture_settings_title">Жесты на выключенном экране</string>
     <string name="touchscreen_gesture_settings_summary">Выполняйте различные жесты на выключенном экране для быстрых действий</string>
+
+    <!-- Power -->
+    <string name="power_title">Власть</string>
+    <string name="powershare_mode_title">Беспроводное разделение мощности</string>
+    <string name="powershare_mode_summary">Включить обратную беспроводную зарядку</string>
+    <string name="quiet_mode_title">Бесшумный режим</string>
+    <string name="quiet_mode_summary">Включить тихий режим для беспроводного зарядного устройства OEM</string>
 </resources>

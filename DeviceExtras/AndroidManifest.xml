@@ -190,6 +190,28 @@
             </intent-filter>
         </service>
 
+        <!-- PowerShare tile -->
+        <service
+            android:name="org.neoteric.device.DeviceExtras.PowerShareTileService"
+            android:icon="@drawable/ic_powershare"
+            android:label="@string/powershare_mode_title"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+
+        <!-- QuiteMode tile -->
+        <service
+            android:name="org.neoteric.device.DeviceExtras.QuietModeTileService"
+            android:icon="@drawable/ic_quiet_mode"
+            android:label="@string/quiet_mode_title"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+
         <!-- Search Indexing -->
         <provider
             android:name="org.neoteric.device.DeviceExtras.ConfigPanelSearchIndexablesProvider"

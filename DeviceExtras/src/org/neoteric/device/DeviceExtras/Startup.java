@@ -33,14 +33,30 @@ public class Startup extends BroadcastReceiver {
     @Override
     public void onReceive(final Context context, final Intent bootintent) {
         PackageManager pm = context.getApplicationContext().getPackageManager();
-        ComponentName componentName = new ComponentName("org.neoteric.device.DeviceExtras",
+        ComponentName DCModeTile = new ComponentName("org.neoteric.device.DeviceExtras",
     "org.neoteric.device.DeviceExtras.DCModeTileService");
+        ComponentName PowerShareTile = new ComponentName("org.neoteric.device.DeviceExtras",
+    "org.neoteric.device.DeviceExtras.PowerShareTileService");
+        ComponentName QuietModeTile = new ComponentName("org.neoteric.device.DeviceExtras",
+    "org.neoteric.device.DeviceExtras.QuietModeTileService");
         if (SystemProperties.get("ro.overlay.device", "").equals("instantnoodlep")) {
-            pm.setComponentEnabledSetting(componentName,
+            pm.setComponentEnabledSetting(DCModeTile,
+            PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
+            PackageManager.DONT_KILL_APP);
+            pm.setComponentEnabledSetting(PowerShareTile,
+            PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
+            PackageManager.DONT_KILL_APP);
+            pm.setComponentEnabledSetting(QuietModeTile,
             PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
             PackageManager.DONT_KILL_APP);
         } else {
-            pm.setComponentEnabledSetting(componentName,
+            pm.setComponentEnabledSetting(DCModeTile,
+            PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
+            PackageManager.DONT_KILL_APP);
+            pm.setComponentEnabledSetting(PowerShareTile,
+            PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
+            PackageManager.DONT_KILL_APP);
+            pm.setComponentEnabledSetting(QuietModeTile,
             PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
             PackageManager.DONT_KILL_APP);
         }    
@@ -65,6 +81,14 @@ public class Startup extends BroadcastReceiver {
         enabled = sharedPrefs.getBoolean(DeviceExtras.KEY_OTG_SWITCH, false);
         if (enabled) {
         restore(OTGModeSwitch.getFile(), enabled);
+               }
+        enabled = sharedPrefs.getBoolean(DeviceExtras.KEY_POWERSHARE_SWITCH, false);
+        if (enabled) {
+        restore(PowerShareModeSwitch.getFile(), enabled);
+               }
+        enabled = sharedPrefs.getBoolean(DeviceExtras.KEY_QUIETMODE_SWITCH, false);
+        if (enabled) {
+        restore(QuietModeSwitch.getFile(), enabled);
                }
         AdrenoBoostPreference.restore(context);
         DeviceExtras.restoreSliderStates(context);

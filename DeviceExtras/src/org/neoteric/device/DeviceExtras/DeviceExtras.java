@@ -29,6 +29,7 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.provider.Settings;
 import android.text.TextUtils;
@@ -75,6 +76,9 @@ public class DeviceExtras extends PreferenceFragment
     public static final String KEY_OTG_SWITCH = "otg";
     public static final String KEY_TOUCHSCREEN="touchscreen";
     public static final String KEY_VIBSTRENGTH = "vib_strength";
+    public static final String KEY_POWERSHARE_SWITCH = "powershare";
+    public static final String KEY_QUIETMODE_SWITCH = "quiet_mode";
+    public static final String KEY_CATEGORY_POWER = "power";
     
     private static ListPreference mFpsInfoPosition;
     private static ListPreference mFpsInfoColor;
@@ -83,6 +87,8 @@ public class DeviceExtras extends PreferenceFragment
     private static TwoStatePreference mGameModeSwitch;
     private static TwoStatePreference mHBMModeSwitch;
     private static TwoStatePreference mOTGModeSwitch;
+    private static TwoStatePreference mPowerShareModeSwitch;
+    private static TwoStatePreference mQuietModeSwitch;
 
     private AdrenoBoostPreference mAdrenoBoost;
     private CustomSeekBarPreference mFpsInfoTextSizePreference;
@@ -156,6 +162,21 @@ public class DeviceExtras extends PreferenceFragment
         mOTGModeSwitch.setEnabled(OTGModeSwitch.isSupported());
         mOTGModeSwitch.setChecked(OTGModeSwitch.isCurrentlyEnabled(this.getContext()));
         mOTGModeSwitch.setOnPreferenceChangeListener(new OTGModeSwitch());
+
+        if (SystemProperties.get("ro.overlay.device", "").equals("instantnoodlep")) {
+            mPowerShareModeSwitch = (TwoStatePreference) findPreference(KEY_POWERSHARE_SWITCH);
+            if (PowerShareModeSwitch.isSupported()) {
+                mPowerShareModeSwitch.setChecked(PowerShareModeSwitch.isCurrentlyEnabled(this.getContext()));
+                mPowerShareModeSwitch.setOnPreferenceChangeListener(new PowerShareModeSwitch());
+            }
+            mQuietModeSwitch = (TwoStatePreference) findPreference(KEY_QUIETMODE_SWITCH);
+            if (QuietModeSwitch.isSupported()) {
+                mQuietModeSwitch.setChecked(QuietModeSwitch.isCurrentlyEnabled(this.getContext()));
+                mQuietModeSwitch.setOnPreferenceChangeListener(new QuietModeSwitch());
+            }
+        } else {
+            getPreferenceScreen().removePreference((PreferenceCategory) findPreference(KEY_CATEGORY_POWER));
+        }
 
         // Slider Preferences
         initNotificationSliderPreference();
