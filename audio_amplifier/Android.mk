@@ -13,6 +13,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+OPKONA_PRODUCT := %opkona
+
+ifneq (,$(filter $(OPKONA_PRODUCT), $(TARGET_PRODUCT)))
 
 LOCAL_PATH := $(call my-dir)
 
@@ -42,3 +45,5 @@ LOCAL_SHARED_LIBRARIES += \
     libtinyalsa
 
 include $(BUILD_SHARED_LIBRARY)
+
+endif
